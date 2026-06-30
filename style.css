@@ -1,0 +1,69 @@
+body {
+  font-family: 'Montserrat', sans-serif; /*Стиль общего текста*/
+  font-size: 13px; /*Размер общего шрифта*/
+  line-height: 18px; /*Расстояние между строчками*/
+  background-color: #ffffff; /*Цвет общего фона*/
+  color: #515076;
+  
+
+.title {
+  padding: 100px;
+  margin: 100px;
+  font-size: 70px; /*Размер  шрифта*/
+  line-height: 78px;
+  margin: 0;
+  text-align: center;
+ } 
+
+.application {
+  font-size: 12px;
+  line-height: 24px;
+  margin: 0;
+}
+
+.object {
+  font-size: 20px;
+  font-weight: 220px;
+  line-height: 27px;
+}
+
+.main-text {
+  font-size: 13px;
+  line-height: 18px;
+  text-align: left;
+  padding:0;
+  margin: 0;
+
+}
+
+.compound {
+  font-size: 13px;
+  line-height: 18px;
+  text-align: left;
+  padding:0;
+  margin: 0;
+  } 
+
+.price {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.price-value {
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0;
+}
+
+
+
+.products-list {
+
+  list-style: none;
+  padding: 50px;
+  margin-top: 50px;
+}
+
+}
