@@ -11,18 +11,20 @@ body {
   background-color: #ffffff;
   color: #515076;
 }
-  
-.background {
-  width: 100%;
+
+.catalog {
+  padding-left: 85px;
+  margin-bottom: 116px;
 }
 
-.background-wrapper {
-  width: 790px;
-  height: 697px;
-  position: absolute;
+.conteiner {
+  width: 1110px;
+  background-color: #ffffff;
+  padding-top: 0;
+  background-image: url(images/flying_dandelions.png);
+  background-size: 790px 697px;
+  background-repeat: no-repeat;
   z-index: -1;
-  left: 85px;
-  top: 0px;
 }
 
 .title {
@@ -30,24 +32,20 @@ body {
   font-size: 70px;
   font-weight: 400;
   line-height: 78px;
-  margin-top: 220px;
+  padding-top: 220px;
   margin-bottom: 110px;
  } 
 
 .products-list {
-  max-width: 1110px;
-  max-height: 1191px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   list-style: none;
   column-gap: 45px;
   row-gap: 45px;
-  margin-left: 85px;
 }
 
-
-.product-item {
+.product-card {
   padding-left: 25px;
   width: 340px;
   height: 573px;
@@ -59,34 +57,37 @@ body {
   padding-bottom: 30px;
 }
 
-.description {
+.product-card__category {
   padding-top: 5px;
   font-size: 12px;
   line-height: 24px;
   text-transform: uppercase;
 }
 
-.product-name {
+.product-card__name {
   padding-top: 5px;
   font-size: 20px;
   font-weight: 220px;
   line-height: 27px;
 }
 
-.product-descriptiont {
+.product-card__description {
+  width: 287px;
   padding-top: 5px;
-  font-size: 13px;
-  line-height: 18px;
   text-align: left;
 }
 
-.compound {
+.product-card__compound {
   line-height: 22px;
   padding-left: 15px;
   padding-top: 15px;
   } 
 
-.conteiner-price {
+.compound__text {
+  margin-left: -16px;
+  }
+
+.product-card__price {
   padding-top: 25px;
   width: 290px;
   height: 24px;
@@ -94,13 +95,13 @@ body {
   justify-content: space-between;
 }
 
-.price {
+.product-card__price-text {
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
 }
 
-.price-value {
+.product-card__price-value {
   font-size: 20px;
   line-height: 24px;
 }
