@@ -43,6 +43,8 @@ body {
   list-style: none;
   column-gap: 45px;
   row-gap: 45px;
+  list-style-position: inside;
+  /* list-style-position: outside; */
 }
 
 .product-card {
@@ -84,7 +86,7 @@ body {
   } 
 
 .compound__text {
-  margin-left: -16px;
+  /* margin-left: -16px; */
   }
 
 .product-card__price {
@@ -105,3 +107,8 @@ body {
   font-size: 20px;
   line-height: 24px;
 }
+
+.changeColorButtom.active {
+  background-color: red;
+}
+

@@ -61,15 +61,20 @@ textTitle.addEventListener('mouseenter', () => {
   console.log(textTitle.textContent);
 })
 
-// Покраска главного заголовка
+// Сменить цвет кнопки при нажатии
 
-const changeColorButton = document.querySelector('#change-title-color-button');
+const changeColorButton = document.querySelector('#change-color-buttom');
 
-  changeColorButton.addEventListener('click', function () {
-  textTitle.style.color = redColorHash;
+  changeColorButton.addEventListener('click', ()=> {
 
-  // colorChangeButton.classList.toggle('active');
+  changeColorButton.classList.toggle('active');
+    
+    // console.log ("Кнопка переключилась")
+    // textTitle.style.color = redColorHash;
+    // title.classList.toggle('active');
   })
+
+
 
 
 
