@@ -21,7 +21,7 @@ body {
   width: 1110px;
   background-color: #ffffff;
   padding-top: 0;
-  background-image: url(images/flying_dandelions.png);
+  background-image: url('images/flying_dandelions.png');
   background-size: 790px 697px;
   background-repeat: no-repeat;
   z-index: -1;
@@ -44,7 +44,6 @@ body {
   column-gap: 45px;
   row-gap: 45px;
   list-style-position: inside;
-  /* list-style-position: outside; */
 }
 
 .product-card {
@@ -81,13 +80,9 @@ body {
 
 .product-card__compound {
   line-height: 22px;
-  padding-left: 15px;
   padding-top: 15px;
   } 
 
-.compound__text {
-  /* margin-left: -16px; */
-  }
 
 .product-card__price {
   padding-top: 25px;
