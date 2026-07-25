@@ -51,6 +51,6 @@ function test  () {
 
 // ЗАДАНИЕ 7
 
-const speed = 100;
+const waterBoiling = 100;
 const value = 1000;
-const name = "Алмаз";
+const cityBaraka = "Медина";
