@@ -32,10 +32,9 @@ const personalCar =  {
   transmission: 'МКП',
   // maximumSpeed: '160'
 }
-const owner = { ...person } 
-const data = { ...owner, ...personalCar}
-console.log(data)
 
+personalCar.owner = person;
+console.log(personalCar.owner)
 
 // ЗАДАНИЕ 5 
 
@@ -87,7 +86,8 @@ const scholars = [
     yearOfBirth: 810,
     yearOfDeath: 870,
     cityOfBirth: 'Бухара',
-    book: 'Сахих аль-Бухари'
+    book: 'Сахих аль-Бухари',
+    sahih: true,
   },
 
   {
@@ -95,7 +95,8 @@ const scholars = [
     yearOfBirth: 821,
     yearOfDeath: 875,
     cityOfBirth: 'Нишапур',
-    book: 'Сахих Муслим'
+    book: 'Сахих Муслим',
+    sahih: true,
   },
 
     {
@@ -103,7 +104,8 @@ const scholars = [
     yearOfBirth: 817,
     yearOfDeath: 888,
     cityOfBirth: 'Систан',
-    book: 'Сунан Абу Дауд'
+    book: 'Сунан Абу Дауд',
+    sahih: false,
   },
 
     {
@@ -111,14 +113,16 @@ const scholars = [
     yearOfBirth: 825,
     yearOfDeath: 892,
     cityOfBirth: 'Термез',
-    book: 'Сунан ат-Тирмизи'
+    book: 'Сунан ат-Тирмизи',
+    sahih: false,
   },
   {
     nameScholar: 'Ан-Насаи',
     yearOfBirth: 830,
     yearOfDeath: 915,
     cityOfBirth: 'Ниса',
-    book: 'Сунана ан-Насаи'
+    book: 'Сунана ан-Насаи',
+    sahih: false,
   },
 
 ]
@@ -129,8 +133,9 @@ const IbnMajah = [
     yearOfBirth: 824,
     yearOfDeath: 886,
     cityOfBirth: 'Казвин',
-    book: 'Сунан Ибн Маджа'
-  },
+    book: 'Сунан Ибн Маджа',
+    sahih: false,
+  }
 ]
 
 const muslimScholars = scholars.concat(IbnMajah)
@@ -141,6 +146,7 @@ console.log(muslimScholars)
 //  Создайте еще один массив, состоящий из тех же книг, но относящихся к определенной вселенной 
 //  (Гарри Поттер, Марвел и т. д.). (Если используете другой объект, импровизируйте). 
 //  С помощью известного нам метода массива или оператора (рекомендую использовать оператор) объедините эти два массива в один
+
 console.log('Задание 9');
 
 const booksOfBukhari = [
@@ -174,17 +180,15 @@ console.log(heritage)
 
 console.log('Задание 10');
 
-booksOfBukhari.map((book) => {
-  if(book.sahih == true) {
-    book.status = 'Сахих'
-  } else {
-    book.status = 'Не Сахих'
-  }
-});
-console.log(booksOfBukhari);
-
-// Второй вариант решения, тоже работает
-
-// booksOfBukhari.map(item => item.sahih == true ? item.status = 'Сахих' : item.status = 'Не сахих')
-// console.log(booksOfBukhari);
+function isSahih(list) {
+  return list.map(book => {
+    if(book.sahih == true) {
+      book.isSahih = 'Сахих'
+    } else {
+      book.isSahih = 'Не Сахих'
+    }
+    return book;
+  });
+}
+console.log(isSahih(heritage));
 
