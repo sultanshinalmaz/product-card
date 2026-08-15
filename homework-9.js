@@ -22,12 +22,12 @@ console.log(newArrayFalse)
 // Написать функцию, которая будет принимать массив в качестве аргумента и менять его порядок на противоположный ("переворачивать") . С помощью этой функции перевернуть два указанных выше массива.
 console.log('Задание 4')
 
-const reverseNumbers = numbers.reverse()
-const reverseMuslimScholars = muslimScholars.reverse()
+function reverseArray(array) {
+  return [...array].reverse();  
+};
 
-console.log(reverseNumbers)
-console.log(reverseMuslimScholars)
-
+console.log(reverseArray(numbers));
+console.log(reverseArray(muslimScholars));
 
 
 console.log('Уровень 2:')
@@ -54,14 +54,18 @@ console.log('Задание 8')
 
 // 8. Перебрать массив таким образом, что бы пользователи с id меньше или равно 5 имели postId: 2, а те, у кого id больше 5, имели postId: 1
 
-commentsArray.forEach(index => {
-  if (index.id <= 5) {
-    index.postId = 2;
+
+const  changePostId = commentsArray.map(index => {
+  // Создаем копию объекта и перезаписываем postId по условию
+  if (index.id >= 5) {
+    return { ...index, postId: 1 };
   } else {
-    index.postId = 1;
+    return { ...index, postId: 2 };
   }
-})
-console.log(commentsArray)
+});
+
+// Проверяем результат
+console.log(changePostId); 
 
 console.log('Задание 9')
 
@@ -79,13 +83,20 @@ console.log('Задание 10')
 // 10. Перебираем массив, добавляем объектам свойство isInvalid и проверяем: 
 // если длина тела сообщения (body) больше 180 символов, устанавливаем true, если меньше — false.
 
-commentsArray.forEach(line => {
-  const bodyLength = line.body.length; 
-  line.bodyLength = bodyLength;
-  line.isInvalid = line.body.length > 180;
+const addIsInvalid = commentsArray.map(line => {
+  const bodyLength = line.body.length;
+
+  if (bodyLength > 180) {
+
+    return { ...line, isInvalid: true, textLength: bodyLength };
+
+  } else {
+    return { ...line, isInvalid: false, textLength: bodyLength };
+  }
 });
 
-console.log(commentsArray.slice(0, 3));
+console.log(addIsInvalid);
+
 
 
 console.log('Уровень 3:')
