@@ -13,16 +13,18 @@
 
 <body>
 
+
+
   <main class="catalog">
     <div class="conteiner catalog__conteiner">
       <h1 class="title">Выбери свой продукт</h1>
 
-      <button class="changeColorButtom" id="change-color-buttom">Сменить цвет кнопки при нажатии</button>
+      <!-- <button class="changeColorButtom" id="change-color-buttom">Сменить цвет кнопки при нажатии</button> -->
    
-      <button id="change-color-first-card">Сменить цвет карточки</button>
-      <button id="change-color-all-card">Сменить цвет всех карточек</button>
-      <button id="open-google">Открыть страницу Google.com</button>
-      <button id="output-console-log">Вывести сообщение в консоль лог</button>
+      <!-- <button id="change-color-first-card">Сменить цвет карточки</button> -->
+      <!-- <button id="change-color-all-card">Сменить цвет всех карточек</button> -->
+      <!-- <button id="open-google">Открыть страницу Google.com</button> -->
+      <!-- <button id="output-console-log">Вывести сообщение в консоль лог</button> -->
 
       
       <ul class="products-list">
@@ -129,10 +131,25 @@
   </ul>
     </div>
   </main>
-  <!-- <script src="main.js"></script> -->
+  <script src="main.js"></script>
   <!-- <script src="homework-7.js"></script> -->
   <!-- <script src="homework-8.js"></script> -->
-    <script src="homework-9.js" type="module"></script>
+  <!-- <script src="homework-9.js" type="module"></script> -->
+
+  <script src="homework-10.js" type="module"></script>
+
+<ul id="productCards-list"></ul>
+
+<template id="productCards-template">
+  <li>
+    <p class="cardCategory"></p>
+    <p class="cardName"></p>
+    <p class="cardDescription"></p>
+    <p class="cardCompound"></p>
+    <p class="cardPrice"></p>
+    <p class="cardImagine"></p>
+  </li>
+</template>
 
 </body>
 </html>
